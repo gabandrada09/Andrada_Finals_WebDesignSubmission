@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Werewolf Program</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-image: url('WerewolfBackground.jpg'); 
+      background-repeat: no-repeat; 
+      background-position: center center; 
+      background-size: contain; 
+      background-attachment: fixed;
+    }
+
+    #backBtn {
+      padding: 12px 24px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background: white;
+      color: black;
+      font-weight: bold;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .small {
+      padding: 12px 24px;
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: black;
+      background: white;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>How to Play Werewolf</h1>
+  <button id="backBtn" onclick="location.href='WerweolfMAIN.html';">Back to Main</button>
+  
+  <div class="small">
+    • This Website serves an arbiter or card replacement.<br>
+    • There are 2 special roles.<br>
+    • Werewolf is the killer, every night they wake and point to someone to kill.<br>
+    • Doctor is the savior and part of the villager team, every night they wake and point to someone to spare from death.<br>
+    • The doctor and the werewolf don't wake up at the same time.<br>
+    • Villagers must find, through social deduction, who the werewolf is and vote them out.<br>
+    • Once all werewolves get voted out, the villagers win.<br>
+    • Once the ratio to werewolves and villagers is 1:1, the werewolf wins.<br>
+  </div>
+
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>

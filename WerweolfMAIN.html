@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Werewolf Program</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-image: url('WerewolfBackground.jpg'); 
+      background-repeat: no-repeat; 
+      background-position: center center; 
+      background-size: contain; 
+      background-attachment: fixed;
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 400px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    #role {
+      font-size: 2rem;
+      margin-top: 20px;
+      padding: 20px;
+      border: 2px solid white;
+      border-radius: 10px;
+      min-height: 60px;
+    }
+
+    #revealBtn {
+      padding: 12px 24px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background: white;
+      color: black;
+      font-weight: bold;
+    }
+
+    #faqBtn {
+      padding: 12px 24px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background: white;
+      color: black;
+      font-weight: bold;
+    }
+
+    #addBtn {
+      padding: 12px 24px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background: white;
+      color: black;
+      font-weight: bold;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .small {
+      padding: 12px 24px;
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: black;
+      background: white;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Your Role Is.....</h1>
+  <button id="faqBtn" onclick="location.href='WerweolfFAQ.html';">How to Play</button>
+  <button id="revealBtn">Reveal</button>
+  <button id="addBtn" onclick="location.href='WereweolfADD.html';">Additional Roles</button>
+
+  <div id="role">???</div>
+
+  <div class="small">
+    • ROLE IS ONLY GENERATED ONCE.<br>
+    • CLOSE AND REOPEN TO GET A NEW ROLE.<br> 
+    (only do this when game is over)<br>
+  </div>
+
+</div>
+
+<script>
+
+  // CHANGE THESE ROLES
+  const availableRoles = [
+    "Werewolf",
+    "Bodyguard",
+    "Villager",
+    "Villager",
+    "Villager"
+  ];
+
+  const roleBox = document.getElementById("role");
+  const revealBtn = document.getElementById("revealBtn");
+
+  // Check if device already has role
+  const savedRole = sessionStorage.getItem("werewolf_role");
+
+  if(savedRole){
+    roleBox.innerText = savedRole;
+    revealBtn.disabled = true;
+    revealBtn.innerText = "Role Already Assigned";
+  }
+
+  revealBtn.addEventListener("click", () => {
+
+    // Random role
+    const randomIndex =
+      Math.floor(Math.random() * availableRoles.length);
+
+    const selectedRole = availableRoles[randomIndex];
+
+    // Save role to this device
+    sessionStorage.setItem("werewolf_role", selectedRole);
+
+    // Display role
+    roleBox.innerText = selectedRole;
+
+    // Disable button
+    revealBtn.disabled = true;
+    revealBtn.innerText = "Role Assigned";
+
+  });
+
+</script>
+
+</body>
+</html>

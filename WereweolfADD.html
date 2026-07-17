@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Werewolf Program</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-image: url('WerewolfBackground.jpg'); 
+      background-repeat: no-repeat; 
+      background-position: center center; 
+      background-size: contain; 
+      background-attachment: fixed; 
+    }
+
+    #backBtn {
+      padding: 12px 24px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background: white;
+      color: black;
+      font-weight: bold;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .small {
+      padding: 12px 24px;
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: black;
+      background: white;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Additional Werewolf Roles</h1>
+  <button id="backBtn" onclick="location.href='WerweolfMAIN.html';">Back to Main</button>
+  
+  <div class="small">
+    • Lone Wolf - A werewolf that would like his fellow werewolf teammates to be voted out to win.<br>
+    • Witch - A villager that may choose to either save or kill another player once per game.<br>
+    • Cult Leader - A werewolf that instead of killing, secretly converts everyone into their cult, if successful they win.<br>
+    • Suicide Bomber - A villager that, when killed or voted out, kills the player to their right and their left.<br>
+  </div>
+
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>
